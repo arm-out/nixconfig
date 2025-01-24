@@ -1,8 +1,12 @@
 { config, pkgs, ... }:
 
 {
-  host.username = "armout";
-  host.homeDirectory = "/home/armout";
+  imports = [
+    ./programs/desktop
+  ];
+
+  home.username = "armout";
+  home.homeDirectory = "/home/armout";
 
   # Set git config
   programs.git = {
@@ -10,4 +14,8 @@
     userName = "arm-out";
     userEmail = "arminsuraj@gmail.com";
   };
+
+
+  home.stateVersion = "24.11";
+  programs.home-manager.enable = true;
 } 
