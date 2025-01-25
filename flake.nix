@@ -14,7 +14,13 @@
       modules = [
 	./nixos/configuration.nix
 
-	{ programs.hyprland.enable = true; }
+	{
+	   programs.hyprland.enable = true;
+	   environment.sessionVariables = {
+	     NIXOS_OZONE_WL = "1";    # Hint electron apps to use Wayland
+	   };
+        }
+
 
         home-manager.nixosModules.home-manager {
 	  home-manager.useGlobalPkgs = true;

@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./programs/desktop
+    ./programs
   ];
 
   home.username = "armout";
