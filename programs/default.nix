@@ -14,8 +14,5 @@
 
     # Second brain
     obsidian
-
-    # GTK Theme
-    dracula-theme
   ];
 }
