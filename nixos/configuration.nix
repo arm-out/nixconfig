@@ -78,6 +78,22 @@
   #   enableSSHSupport = true;
   # };
 
+  security = {
+    sudo.wheelNeedsPassword = false;
+  };
+
+  # Store optimizations
+  nix = {
+    settings = {
+      auto-optimise-store = true;
+    };
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
+  };
+
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
