@@ -71,6 +71,17 @@
     git
   ];
 
+  # Fonts
+  fonts = {
+    packages = with pkgs; [
+      corefonts				# MS
+      font-awesome			# Icons
+      noto-fonts			# Google fonts
+      noto-fonts-emoji
+      nerd-fonts.fira-code
+    ];
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
